@@ -1,0 +1,55 @@
+{{define "main"}}
+
+<!-- ======= Resume Section ======= -->
+
+<section id="resume" class="resume">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>{{.Title}}</h2>
+      {{with .Params.main_section}}
+      <p>{{.overview}}</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="resume-item pb-0 mb-5">
+          <h4>Mission:</h4>
+          <p>
+            <em> {{.mission}} </em>
+          </p>
+        </div>
+
+        <div class="resume-item pb-0 mb-5">
+          <h4>Role:</h4>
+          <p><strong>{{.role}}</strong></p>
+        </div>
+
+        <div class="resume-item">
+          <h4>Activities:</h4>
+          {{range .activities}}
+          <p>{{.}}</p>
+          {{end}}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="img">
+          {{range.images}}
+          <img src="{{.}}" alt="Image 1" class="img-fluid mb-4" />
+          {{end}}
+        </div>
+      </div>
+    </div>
+    <div class="navigator">
+      <div class="left">
+        <a href=""><i class="bi bi-arrow-left-short"></i> Previous</a>
+      </div>
+      <div class="right">
+        <a href=""><i class="bi bi-arrow-right-short"></i> Next</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!-- End Resume Section -->
+
+{{end}}
