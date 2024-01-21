@@ -1,22 +1,114 @@
-<!-- ======= Mobile nav toggle button ======= -->
-<!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-<i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
 <!-- ======= Header ======= -->
-<header id="header" class="d-flex flex-column justify-content-center">
-  <nav id="navbar" class="navbar nav-menu">
-    <ul>
-      {{- range site.Menus.main }}
-      <li>
-        <a href="{{.URL}}" class="nav-link scrollto">
-          {{with .Params.class}}
-          <i class="{{.}}"></i>
-          {{end}}
-          <span>{{.Name}}</span></a
-        >
-      </li>
-      {{end}}
-    </ul>
-  </nav>
-  <!-- .nav-menu -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="d-flex align-items-center">
+    <a href="/" class="logo d-flex align-items-center">
+      <img src="/assets/img/logo.png" alt="Logo" />
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div>
+  <!-- End Logo -->
 </header>
 <!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar d-flex flex-column justify-content-between">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li
+      class="nav-item main-logo d-flex flex-column justify-content-between mb-5"
+    >
+      <img src="/assets/img/logo.png" width="50px" alt="" class="img-fluid" />
+    </li>
+    <!-- End Dashboard Nav -->
+
+    <div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/">
+          <i class="bx bx-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <!---->
+      <li class="nav-item">
+        <a
+          class="nav-link collapsed"
+          data-bs-target="#col1"
+          data-bs-toggle="collapse"
+          href="#"
+        >
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Project 1</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul
+          id="col1"
+          class="nav-content collapse"
+          data-bs-parent="#sidebar-nav"
+        >
+          <li>
+            <a href="/project-1">
+              <i class="bi bi-chevron-right"></i><span>Details</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!---->
+      <li class="nav-item">
+        <a
+          class="nav-link collapsed"
+          data-bs-target="#col2"
+          data-bs-toggle="collapse"
+          href="#"
+        >
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Project 2</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul
+          id="col2"
+          class="nav-content collapse"
+          data-bs-parent="#sidebar-nav"
+        >
+          <li>
+            <a href="/project-1">
+              <i class="bi bi-chevron-right"></i><span>Details</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!---->
+      <li class="nav-item">
+        <a
+          class="nav-link collapsed"
+          data-bs-target="#col3"
+          data-bs-toggle="collapse"
+          href="#"
+        >
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Project 3</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul
+          id="col3"
+          class="nav-content collapse"
+          data-bs-parent="#sidebar-nav"
+        >
+          <li>
+            <a href="/project-1">
+              <i class="bi bi-chevron-right"></i><span>Details</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/contact">
+          <i class="bx bx-envelope"></i>
+          <span>Hire Roman Now!</span>
+        </a>
+      </li>
+    </div>
+  </ul>
+  <li class="nav-heading">© 2024. Made with ♥ by Roman</li>
+</aside>
+
+<!-- End Sidebar-->

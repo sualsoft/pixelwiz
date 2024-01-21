@@ -1,57 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html"}}
+{{define "main"}}
 
-  <body>
-    {{partial "header.html"}}
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    {{with .Params.hero_section}}
-    <section id="hero" class="d-flex flex-column justify-content-center">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h1>{{.name}}</h1>
-            <p>
-              I'm
-              <span
-                class="typed"
-                data-typed-items="{{range .titles}} {{.}} {{end}}"
-              ></span>
-            </p>
-            <p class="text-container">{{.bio}}</p>
-            <div class="social-links">
-              <a href="callto:561-247-3146" class="twitter">
-                <i class="bi bi-telephone-fill"></i>
-              </a>
-              <a href="mailto:ux@pixelbendr.com" class="google-plus">
-                <i class="bi bi-envelope-at-fill"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/pixelwiz"
-                target="_blank"
-                class="linkedin"
-                ><i class="bx bxl-linkedin"></i
-              ></a>
-            </div>
-            <div class="btn-dark">
-              <a href="">
-                View Portfolio <i class="bi bi-arrow-right-short"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="img">
-              <img src="{{.image}}" alt="Profile Image" class="img-fluid" />
-            </div>
-          </div>
+<!-- ======= Hero Section ======= -->
+{{with .Params.hero_section}}
+<section id="hero">
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>{{.name | safeHTML}}</h1>
+        <p>
+          I've experiance with
+          <span
+            class="typed"
+            data-typed-items="{{range .titles}} {{.}} {{end}}"
+          ></span>
+        </p>
+        <p class="text-container">{{.bio}}</p>
+        <div class="social-links">
+          <a href="callto:561-247-3146" class="twitter">
+            <i class="bi bi-telephone-fill"></i>
+          </a>
+          <a href="mailto:ux@pixelbendr.com" class="google-plus">
+            <i class="bi bi-envelope-at-fill"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pixelwiz"
+            target="_blank"
+            class="linkedin"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </div>
+        <div class="btn-dark">
+          <a href="">
+            View Portfolio <i class="bi bi-arrow-right-short"></i>
+          </a>
         </div>
       </div>
-    </section>
-    {{end}}
-    <!-- End Hero -->
+      <div class="col-md-6">
+        <div class="img">
+          <img src="{{.image}}" alt="Profile Image" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!-- End Hero -->
 
-    {{partial "codes.html"}}
-  </body>
-</html>
+{{end}}

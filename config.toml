@@ -3,43 +3,86 @@ languageCode = 'en-us'
 title = 'Portfolio of Roman Smolkin'
 
 
-[menus]
-[[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 1
-    [menus.main.params]
-      class = 'bx bx-home'
-    
 
-[[menus.main]]
-    name = 'Project-1'
-    pageRef = 'project-1'
-    weight = 2
-    [menus.main.params]
-      class = 'bi bi-file-earmark-text'
-    
+[[menu.main]]
+  name = "Project-1"
+  url = "#"
+  weight = 2
+  [menu.main.params]
+    class = 'bi bi-file-earmark-text'
 
-[[menus.main]]
-    name = 'Project-2'
-    pageRef = '/project-2'
-    weight = 3
-    [menus.main.params]
-      class = 'bi bi-file-earmark-text'
-    
+[[menu.main]]
+  name = "Details"
+  parent = "Project-1"
+  url = "/project-1/details/"
+  weight = 1
 
-[[menus.main]]
-    name = 'Project-3'
-    pageRef = '/project-3'
-    weight = 4
-    [menus.main.params]
-      class = 'bi bi-file-earmark-text'
-    
+[[menu.main]]
+  name = "Details 2"
+  parent = "Project-1"
+  url = "/project-1/details-2/"
+  weight = 2
 
-[[menus.main]]
-    name = 'Hire Roman Now!'
-    pageRef = '/contact'
-    weight = 5
-    [menus.main.params]
-      class = 'bx bx-envelope'
-    
+[[menu.main]]
+  name = "Details 3"
+  parent = "Project-1"
+  url = "/project-1/details-3/"
+  weight = 3
+
+
+[[menu.main]]
+  name = "Project-2"
+  url = "#"
+  weight = 3
+  [menu.main.params]
+    class = 'bi bi-file-earmark-text'
+
+[[menu.main]]
+  name = "Details"
+  parent = "Project-2"
+  url = "/project-2/details/"
+  weight = 1
+
+[[menu.main]]
+  name = "Details 2"
+  parent = "Project-2"
+  url = "/project-2/details-2/"
+  weight = 2
+
+[[menu.main]]
+  name = "Details 3"
+  parent = "Project-2"
+  url = "/project-2/details-3/"
+  weight = 3
+
+[[menu.main]]
+  name = "Project-3"
+  url = "#"
+  weight = 3
+  [menu.main.params]
+    class = 'bi bi-file-earmark-text'
+
+[[menu.main]]
+  name = "Details"
+  parent = "Project-3"
+  url = "/project-3/details/"
+  weight = 1
+
+[[menu.main]]
+  name = "Details 2"
+  parent = "Project-3"
+  url = "/project-3/details-2/"
+  weight = 2
+
+[[menu.main]]
+  name = "Details 3"
+  parent = "Project-3"
+  url = "/project-3/details-3/"
+  weight = 3
+
+[[menu.main]]
+  name = "Hire Roman Now!"
+  url = "/contact"
+  weight = 4
+  [menu.main.params]
+    class = 'bx bx-envelope'
