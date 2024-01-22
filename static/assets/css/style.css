@@ -44,6 +44,26 @@ a:hover {
   margin-left: 6px;
 }
 
+.btn-light {
+  color: var(--navi-blue);
+  background-color: var(--light-blue);
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+.btn-light a i {
+  transition: all 0.3s;
+}
+.btn-light a:hover {
+  color: var(--navi-blue);
+}
+
+.btn-light a:hover i {
+  margin-left: 6px;
+}
+
 h1,
 h2,
 h3,
@@ -281,7 +301,28 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+@media (min-width: 992px) {
+  .portfolio {
+    padding-left: 160px;
+  }
+}
+.portfolio {
+  background-color: var(--navi-blue);
+}
+.portfolio header h2 {
+  color: var(--ash-blue);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--light-blue);
+}
 
+.portfolio p {
+  font-size: 22px;
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -291,6 +332,11 @@ section {
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--ash-blue);
+}
+@media (min-width: 992px) {
+  .resume {
+    padding-left: 160px;
+  }
 }
 
 .resume .resume-item {

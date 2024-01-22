@@ -1,5 +1,5 @@
 ---
-title: project-1
+title: "Project 1: Medical Software"
 layout: portfolioList
 main_section:
   overview: "Modernize the UX and UI of an aging but very successful Radiology Information System (RIS) used for scheduling appointments and managing patients, referring doctors and all other components needed to create an intuitive and productive work flow for staff and management of clinics."
